@@ -1,0 +1,18 @@
+<div class="dashboard">
+    <div class="header">
+        <h2>Add data to table</h2>
+        <input type="text" class="input-field" placeholder="Add to table" [(ngModel)]="name">
+        <br>
+        <button (click)="Add()">{{addButton}}</button>
+    </div><br><br>
+    
+    <div class="container">
+    <table>
+        <tr *ngFor="let d of data; index as i">
+          <td>{{d.name}}</td>
+          <td><button (click)="Edit(d.name,i)">Edit</button></td>
+          <td><button (click)="Delete(i)">Delete</button></td>
+        </tr>
+      </table>
+    </div>
+    </div>
